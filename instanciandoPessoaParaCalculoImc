@@ -1,0 +1,20 @@
+class Pessoa {
+    nome;
+    peso;
+    altura;
+    
+    constructor(nome, peso, altura) {
+        this.nome = nome;
+        this.peso = peso;
+        this.altura = altura;
+        
+    }
+    
+    calcImc() {
+        let imc = this.peso/(this.altura**2);
+        return (`O IMC de ${this.nome} é ${imc}`);
+    }
+}
+
+const Jose = new Pessoa('José', 75, 1.75);
+console.log(Jose.calcImc());
